@@ -21,7 +21,7 @@ import javax.persistence.*;
 @Getter
 @NoArgsConstructor
 @Entity // 테이블과 링크될 클래스임을 나타냄, 기본값으로 클래스의 카멜케이스 이름을 _로 테이블 이름을 매칭(SalesManager.java == sales_manager table)
-public class Posts {
+public class Posts extends BaseTimeEntity{
 
     @Id // 해당 테이블의 PK 필드를 나타냄
     @GeneratedValue(strategy = GenerationType.IDENTITY) // PK의 생성규칙
